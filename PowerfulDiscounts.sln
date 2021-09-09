@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerfulDiscounts.Model", "PowerfulDiscounts.Model\PowerfulDiscounts.Model.csproj", "{DA2916EA-66F4-4304-8E1C-B7547C13BC55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerfulDiscounts.Domain", "PowerfulDiscounts.Domain\PowerfulDiscounts.Domain.csproj", "{DA2916EA-66F4-4304-8E1C-B7547C13BC55}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
