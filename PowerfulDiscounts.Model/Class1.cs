@@ -1,4 +1,4 @@
-﻿nitiusing System;
+﻿using System;
 
 namespace PowerfulDiscounts.Model
 {
