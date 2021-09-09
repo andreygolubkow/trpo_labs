@@ -5,4 +5,9 @@
         <RootNamespace>PowerfulDiscounts.Model</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <Folder Include="Common" />
+      <Folder Include="Validation" />
+    </ItemGroup>
+
 </Project>
