@@ -6,4 +6,8 @@
         <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\PowerfulDiscounts.Domain\PowerfulDiscounts.Domain.csproj" />
+    </ItemGroup>
+
 </Project>
