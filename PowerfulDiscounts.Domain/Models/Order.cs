@@ -9,6 +9,16 @@ namespace PowerfulDiscounts.Model.Models
     /// </summary>
     public class Order
     {
+        private readonly List<IDiscount> _discounts;
+        private readonly List<OrderItem> _items;
+
+        protected Order(string shipmentAddress)
+        {
+            ShipmentAddress = shipmentAddress;
+            _items = new List<OrderItem>();
+            _discounts = new List<IDiscount>();
+        }
+        
         /// <summary>
         /// Адрес доставки.
         /// </summary>
@@ -17,13 +27,24 @@ namespace PowerfulDiscounts.Model.Models
         /// <summary>
         /// Список заказанных товаров.
         /// </summary>
-        public List<OrderItem> Items { get; protected set; } = new List<OrderItem>();
+        public IReadOnlyCollection<OrderItem> Items => _items;
 
         /// <summary>
         /// Список применяемых скидок.
         /// </summary>
-        public List<IDiscount> Discounts { get; protected set; }
+        public IReadOnlyCollection<IDiscount> Discounts => _discounts;
 
+        
+        /// <summary>
+        /// Создать заказа.
+        /// </summary>
+        /// <param name="shipmentAddress">Адрес доставки.</param>
+        /// <returns>Заказ.</returns>
+        public static Order Create(string shipmentAddress)
+        {
+            return new Order(shipmentAddress);
+        }
+        
         /// <summary>
         /// Расчет финальной стоимости.
         /// </summary>
@@ -42,5 +63,51 @@ namespace PowerfulDiscounts.Model.Models
         {
             return Items.Sum(i => i.Amount * i.Price);
         }
+
+        /// <summary>
+        /// Добавить элемент заказа.
+        /// </summary>
+        /// <param name="item"></param>
+        public void AddItem(OrderItem item)
+        {
+            _items.Add(item);
+        }
+
+        /// <summary>
+        /// Удалить элемент заказа.
+        /// </summary>
+        /// <param name="item"></param>
+        public void RemoveItem(OrderItem item)
+        {
+            _items.Remove(item);
+        }
+
+        /// <summary>
+        /// Изменить адрес доставки.
+        /// </summary>
+        /// <param name="newAddress">Новый адрес доставки.</param>
+        public void ChangeAddress(string newAddress)
+        {
+            ShipmentAddress = newAddress;
+        }
+
+        /// <summary>
+        /// Добавить скидку.
+        /// </summary>
+        /// <param name="discount">Скидка.</param>
+        public void AddDiscount(IDiscount discount)
+        {
+            _discounts.Add(discount);
+        }
+
+        /// <summary>
+        /// Удалить скидку.
+        /// </summary>
+        /// <param name="discount">Скидка.</param>
+        public void RemoveDiscount(IDiscount discount)
+        {
+            _discounts.Remove(discount);
+        }
     }
+    
 }
