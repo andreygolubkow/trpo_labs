@@ -8,10 +8,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="678ddf62-b788-4741-a8c0-df50058bd0c4" name="Changes" comment="Удален Dockerfile из PowerfulDiscounts.App.ConsoleTest">
+    <list default="true" id="678ddf62-b788-4741-a8c0-df50058bd0c4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/PowerfulDiscounts.Domain/Exceptions/InvalidOperationException.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.PowerfulDiscounts/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.PowerfulDiscounts/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PowerfulDiscounts.App.ConsoleTest/PowerfulDiscounts.App.ConsoleTest.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/PowerfulDiscounts.App.ConsoleTest/PowerfulDiscounts.App.ConsoleTest.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/PowerfulDiscounts.App.ConsoleTest/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PowerfulDiscounts.App.ConsoleTest/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PowerfulDiscounts.Domain/Models/Order.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PowerfulDiscounts.Domain/Models/Order.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PowerfulDiscounts.Domain/Models/OrderItem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PowerfulDiscounts.Domain/Models/OrderItem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PowerfulDiscounts.Domain/Validation/Arg.cs" beforeDir="false" afterPath="$PROJECT_DIR$/PowerfulDiscounts.Domain/Validation/Arg.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,7 +105,8 @@
       <option name="presentableId" value="Default" />
       <updated>1631153470176</updated>
       <workItem from="1631153479075" duration="3887000" />
-      <workItem from="1631367001613" duration="4353000" />
+      <workItem from="1631367001613" duration="4452000" />
+      <workItem from="1631634783972" duration="2717000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1631153499903</created>
@@ -153,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1631373128815</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="В ConsoleTest сделан ввод адреса доставки">
+      <created>1631373446752</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1631373446752</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -183,6 +194,7 @@
     <MESSAGE value="Добавлены методы добавления скидок к заказу&#10;Добавлена фиксированная скидка" />
     <MESSAGE value="Удален старый консольный проект. &#10;Добавлен консольный проект net5" />
     <MESSAGE value="Удален Dockerfile из PowerfulDiscounts.App.ConsoleTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удален Dockerfile из PowerfulDiscounts.App.ConsoleTest" />
+    <MESSAGE value="В ConsoleTest сделан ввод адреса доставки" />
+    <option name="LAST_COMMIT_MESSAGE" value="В ConsoleTest сделан ввод адреса доставки" />
   </component>
 </project>

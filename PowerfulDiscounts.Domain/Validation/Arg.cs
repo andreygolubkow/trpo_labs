@@ -35,5 +35,11 @@ namespace PowerfulDiscounts.Model.Validation
             if (arg.CompareTo(val) < 0) return;
             throw new IncorrectDataException(error);
         }
+
+        public static void NotEmpty(string val, string error = "Строка должна быть не пустой")
+        {
+            if (!string.IsNullOrWhiteSpace(val)) return;
+            throw new IncorrectDataException(error);
+        }
     }
 }

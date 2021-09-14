@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using PowerfulDiscounts.Model.Common;
 using PowerfulDiscounts.Model.Models;
 
@@ -22,6 +23,16 @@ namespace PowerfulDiscounts.App.ConsoleTest
                     Console.WriteLine(message);
                 }
             } while (order == null);
+
+
+            while (true)
+            {
+                Console.WriteLine("Введите название продукта(если хотите закончить ввод - введите 0):");
+                var input = Console.ReadLine();
+                if (input == "0") break;
+                
+                    
+            }
         }
     }
 }

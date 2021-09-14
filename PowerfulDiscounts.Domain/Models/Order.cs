@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using PowerfulDiscounts.Model.Validation;
 
 namespace PowerfulDiscounts.Model.Models
 {
@@ -41,6 +42,7 @@ namespace PowerfulDiscounts.Model.Models
         /// <returns>Заказ.</returns>
         public static Order Create(string shipmentAddress)
         {
+            Arg.NotEmpty(shipmentAddress);
             return new Order(shipmentAddress);
         }
         
@@ -67,9 +69,16 @@ namespace PowerfulDiscounts.Model.Models
         /// Добавить элемент заказа.
         /// </summary>
         /// <param name="item"></param>
-        public void AddItem(OrderItem item)
+        public void AddItem(string item, double price, double amount)
         {
-            _items.Add(item);
+            var orderItem = _items.FirstOrDefault(i => i.Name.Equals(item));
+
+            if (orderItem == null)
+            {
+                orderItem = OrderItem.Create(item, price, 0);
+                _items.Add(orderItem);
+            }
+            
         }
 
         /// <summary>
