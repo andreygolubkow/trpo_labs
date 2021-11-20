@@ -3,9 +3,16 @@ using System;
 
 namespace PowerfulDiscounts.Model.Common
 {
-    public class Act
+    public static class Act
     {
-        public static string? Try(System.Action act)
+        
+        
+        /// <summary>
+        /// Выполнить Action, если будет исключение - возвращает Exception, иначе - null.
+        /// </summary>
+        /// <param name="act">Action</param>
+        /// <returns>Если всё ок, тогда null, иначе - exception</returns>
+        public static Exception? Try(this Action act)
         {
             try
             {
@@ -14,7 +21,7 @@ namespace PowerfulDiscounts.Model.Common
             }
             catch (Exception e)
             {
-                return e.Message;
+                return e;
             }
         }
     }
