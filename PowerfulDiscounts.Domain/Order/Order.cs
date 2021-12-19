@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using PowerfulDiscounts.Model.Annotations;
 
 namespace PowerfulDiscounts.Model.Order
 {
@@ -60,6 +61,11 @@ namespace PowerfulDiscounts.Model.Order
             _items.Remove(item);
 
             OnPropertyChanged(nameof(Items));
+        }
+
+        public double GetTotalCost()
+        {
+            return Items.Select(i => i.Count * i.Price).Aggregate((a, b) => a + b);
         }
 
         [NotifyPropertyChangedInvocator]
