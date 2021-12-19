@@ -11,9 +11,4 @@
       <None Remove="Services\**" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Discount\" />
-      <Folder Include="Checkout\" />
-    </ItemGroup>
-
 </Project>

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using PowerfulDiscounts.Model.Annotations;
 
 namespace PowerfulDiscounts.Model.Order
 {
